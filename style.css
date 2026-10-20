@@ -1,0 +1,188 @@
+body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: #0d0d0d;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Nav text styling matching heavy grotesque look */
+        .nav-link {
+            font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            font-size: 1.65rem;
+            line-height: 1;
+            color: #000000;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: #FF0033;
+        }
+
+        /* Custom Stadium Capsule Shape */
+        .stadium-capsule {
+            border-radius: 9999px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .stadium-capsule:hover {
+            box-shadow: 0 30px 60px -12px rgba(255, 0, 51, 0.25);
+        }
+
+        /* Expanded scroll track for video transition */
+        .hero-scroll-wrapper {
+            height: 400vh;
+            position: relative;
+        }
+
+        .hero-sticky-container {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .capsule-dynamic {
+            will-change: width, height, border-radius, transform, opacity;
+        }
+
+        #capsuleVideo {
+            width: 256px;
+            height: 450px;
+            border-radius: 200px;
+        }
+
+        #catalyzmCapsule {
+            width: 320px;
+            height: 340px;
+            border-radius: 180px;
+        }
+
+        @media (max-width: 767px) {
+            #capsuleVideo {
+                width: 210px;
+                height: 340px;
+                border-radius: 120px;
+            }
+
+            #catalyzmCapsule {
+                width: 220px;
+                height: 260px;
+                border-radius: 120px;
+            }
+        }
+
+        .scroll-state-initializing #capsuleVideo,
+        .scroll-state-initializing #heroLeftCol,
+        .scroll-state-initializing #heroRightCol,
+        .scroll-state-initializing #scrollIndicator,
+        .scroll-state-initializing #catalyzmCapsule,
+        .scroll-state-initializing #catalyzmContent {
+            transition: none !important;
+        }
+
+        #heroVideo {
+            will-change: opacity, transform;
+            transform: translateZ(0);
+        }
+
+        /* Video Blinds Texture effect */
+        .slats-overlay {
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.18) 50%,
+                rgba(255,255,255,0.05) 50%
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #111;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF0033;
+        }
+
+        /* Neon Glow pulse */
+        .neon-glow {
+            filter: drop-shadow(0px 0px 8px rgba(255, 0, 51, 0.8));
+        }
+
+        /* Floating Scroll indicator animation */
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(6px); }
+        }
+        .animate-bounce-subtle {
+            animation: bounce-subtle 2s infinite ease-in-out;
+        }
+
+        /* Interactive Canvas cursor trail overlay */
+        #sketchCanvas {
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 40;
+        }
+
+        body .font-sans {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .font-grotesk {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .font-marker {
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        .text-neon,
+        .hover\:text-neon:hover {
+            color: #FF0033;
+        }
+
+        .text-neon-dark,
+        .hover\:text-neon-dark:hover {
+            color: #CC0022;
+        }
+
+        .bg-neon,
+        .hover\:bg-neon:hover {
+            background-color: #FF0033;
+        }
+
+        .bg-neon\/20 {
+            background-color: rgba(255, 0, 51, 0.2);
+        }
+
+        .border-neon {
+            border-color: #FF0033;
+        }
+
+        .selection\:bg-neon::selection,
+        .selection\:bg-neon *::selection {
+            background-color: #FF0033;
+        }
+
+        .selection\:text-white::selection,
+        .selection\:text-white *::selection {
+            color: #fff;
+        }
